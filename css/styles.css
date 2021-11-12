@@ -133,16 +133,12 @@ body {
   color: var(--logo-header-second-part-color);
 }
 
-.menu-item,
-.contact-item {
-}
-
-.menu-item:not(:last-child) {
+.menu-item:not(:last-child),
+.contact-item:not(:last-child) {
   margin-right: 50px;
 }
 
-.header-nav-link,
-.header-nav-link:visited {
+.header-nav-link {
   display: block;
   font-weight: 500;
   line-height: 1.14;
@@ -150,10 +146,18 @@ body {
   color: var(--project-item-heading-color);
   padding-top: 32px;
   padding-bottom: 32px;
+  position: relative;
 }
 
-.contact-item:not(:last-child) {
-  margin-right: 50px;
+.header-nav-link.current::after {
+  content: '';
+  width: 100%;
+  position: absolute;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--primary-action-color);
+  bottom: 0;
+  display: block;
 }
 
 .header-contact-link {
@@ -597,8 +601,8 @@ body {
 }
 
 .backdrop.is-hidden .modal {
-  transform: rotate(180deg);
-  transition: transform 500ms linear;
+  transform: scale(0.1);
+  transition: transform 250ms linear;
 }
 
 .is-hidden {
@@ -617,8 +621,9 @@ body {
   border-radius: 4px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(0deg);
-  transition: transform 500ms linear;
+  transform-origin: 0 0;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms linear;
 }
 
 .modal-btn {
