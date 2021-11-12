@@ -149,7 +149,7 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
   position: relative;
-  transition: color, 250ms, var(--transition-func);
+  transition: color 250ms var(--transition-func);
 }
 
 .header-nav-link.current::after {
@@ -171,11 +171,13 @@ body {
   padding-bottom: 32px;
   display: flex;
   align-items: center;
+  transition: color 250ms var(--transition-func);
 }
 
 .contacts-icon {
   fill: var(--primary-text-color);
   margin-right: 10px;
+  transition: fill 250ms var(--transition-func);
 }
 
 .header-contact-link:hover .contacts-icon,
@@ -235,6 +237,7 @@ body {
 .footer-contact-link {
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms var(--transition-func);
 }
 
 .map-link {
@@ -507,6 +510,7 @@ body {
   color: var(--project-item-heading-color);
   background-color: var(--btn-category-color);
   padding: 6px 22px;
+  transition: color 250ms var(--transition-func), background-color 250ms var(--transition-func), box-shadow 250ms var(--transition-func);
 }
 
 .category-item:not(:last-child) {
