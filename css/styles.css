@@ -15,6 +15,7 @@
   --team-bg-color: #f5f4fa;
   --portfolio-picture-text: rgba(33, 150, 243, 0.9);
   --transition-func: cubic-bezier(0.4, 0, 0.2, 1);
+  --icon-base-color: #afb1b8;
 }
 
 p,
@@ -423,10 +424,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms var(--transition-func);
 }
 
 .social-link.social-link-footer {
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms var(--transition-func);
 }
 
 .social-link:hover,
@@ -437,11 +440,13 @@ body {
 .social-icon {
   width: 20px;
   height: 20px;
-  fill: #afb1b8;
+  fill: var(--icon-base-color);
+  transition: fill 250ms var(--transition-func);
 }
 
 .social-icon.social-icon-footer {
   fill: var(--bg-color);
+  transition: fill 250ms var(--transition-func);
 }
 
 .social-link:hover .social-icon,
@@ -469,8 +474,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--icon-base-color);
   border-radius: 4px;
+  transition: border-color 250ms var(--transition-func);
 }
 
 .customer-item-link:hover,
@@ -478,15 +484,16 @@ body {
   border-color: var(--primary-action-color);
 }
 
-.customer-item-link:hover .customer-icon,
-.customer-item-link:focus .customer-icon {
-  fill: var(--primary-action-color);
-}
-
 .customer-icon {
   width: 106px;
   height: 60px;
-  fill: #afb1b8;
+  fill: var(--icon-base-color);
+  transition: fill 250ms var(--transition-func);
+}
+
+.customer-item-link:hover .customer-icon,
+.customer-item-link:focus .customer-icon {
+  fill: var(--primary-action-color);
 }
 
 .customer-item:not(:last-child) {
@@ -535,6 +542,7 @@ body {
 
 .portfolio-link {
   display: block;
+  transition: box-shadow 250ms var(--transition-func);
 }
 
 .portfolio-link:hover,
