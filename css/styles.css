@@ -616,7 +616,7 @@ body {
 }
 
 .backdrop.is-hidden .modal {
-  transform: scale(0.1);
+  transform: rotate(180deg);
   transition: transform 250ms linear;
 }
 
@@ -637,7 +637,7 @@ body {
   top: 50%;
   left: 50%;
   transform-origin: 0 0;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) rotate(0deg);
   transition: transform 250ms linear;
 }
 
